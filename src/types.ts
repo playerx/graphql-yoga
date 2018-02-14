@@ -9,7 +9,6 @@ import {
   ValidationContext,
 } from 'graphql'
 import { IDirectiveResolvers } from 'graphql-tools/dist/Interfaces'
-import { SubscriptionOptions } from 'graphql-subscriptions/dist/subscriptions-manager'
 import { LogFunction } from 'apollo-server-core'
 
 export interface IResolvers {
@@ -31,7 +30,7 @@ export type Context = { [key: string]: any }
 
 export interface ContextParameters {
   request: Request
-  connection: SubscriptionOptions
+  connection: any
 }
 
 export type ContextCallback = (params: ContextParameters) => Context
